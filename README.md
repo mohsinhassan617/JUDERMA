@@ -1,52 +1,90 @@
-JUDERMA
-Overview
-JUDERMA is an Android application designed for image classification using TensorFlow Lite. It allows users to take or select photos and classify them based on predefined categories. The app is built with modern Android development practices and includes features like image resizing, caching, and a user-friendly interface.
+# JUDERMA
 
-Features
-Capture Images: Take photos using the camera directly from the app.
-Select Images: Choose images from the gallery.
-Image Classification: Classify images using TensorFlow Lite models.
-History: View the history of classified images.
-Settings: Customize app preferences.
-Installation
-Clone the Repository:
+## Overview
 
-sh
-Copy code
-git clone https://github.com/mohsinhassan617/JUDERMA.git
-Open the Project:
-Open the project in Android Studio.
+JUDERMA is an Android application for image classification using TensorFlow Lite. The app allows users to take or select photos and classify them into predefined categories. It features a modern design and is built with best practices in Android development.
 
-Build and Run:
-Build and run the application on an Android device or emulator.
+## Features
 
-Usage
-Capture or Select Image:
+- **Capture Images**: Take photos using your device's camera.
+- **Select Images**: Choose images from your gallery.
+- **Image Classification**: Classify images using TensorFlow Lite models.
+- **History**: View a history of previously classified images.
+- **Settings**: Customize application preferences.
 
-Use the "Capture" button to take a new photo.
-Use the "Select" button to choose an existing image from the gallery.
-Classify Image:
+## Installation
 
-After capturing or selecting an image, the app will automatically classify it using the integrated TensorFlow Lite model.
-View History:
+To get started with JUDERMA, follow these steps:
 
-Navigate to the History section to view previously classified images.
-Contributing
-Contributions are welcome! Please follow these steps to contribute:
+1. **Clone the Repository**:
+    ```sh
+    git clone https://github.com/mohsinhassan617/JUDERMA.git
+    ```
 
-Fork the repository.
-Create a new branch (git checkout -b feature-branch).
-Make your changes and commit them (git commit -am 'Add new feature').
-Push to the branch (git push origin feature-branch).
-Create a new Pull Request.
-License
-This project is licensed under the MIT License.
+2. **Open the Project**:
+    - Open Android Studio.
+    - Select "Open an existing project" and navigate to the cloned repository.
 
-Acknowledgements
-TensorFlow Lite for machine learning capabilities.
-Android Studio for the development environment.
-Any other libraries or resources used in the project.
-Contact
-For any questions or feedback, please contact:
+3. **Build and Run**:
+    - Build the project in Android Studio.
+    - Run the application on an Android device or emulator.
 
-Email: mohsinhassan617@gmail.com
+## Usage
+
+1. **Capture or Select Image**:
+   - Use the "Capture" button to take a new photo.
+   - Use the "Select" button to choose an image from your gallery.
+
+2. **Classify Image**:
+   - The app will automatically classify the image using the TensorFlow Lite model.
+
+3. **View History**:
+   - Access the History section to view previously classified images.
+
+## Contributing
+
+We welcome contributions! To contribute:
+
+1. **Fork the Repository**:
+    - Click the "Fork" button on GitHub to create your own copy of the repository.
+
+2. **Create a New Branch**:
+    ```sh
+    git checkout -b feature-branch
+    ```
+
+3. **Make Your Changes**:
+    - Make the necessary changes or additions to the project.
+
+4. **Commit Your Changes**:
+    ```sh
+    git commit -am 'Add new feature'
+    ```
+
+5. **Push to Your Branch**:
+    ```sh
+    git push origin feature-branch
+    ```
+
+6. **Create a Pull Request**:
+    - Go to the repository on GitHub and create a new Pull Request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgements
+
+- **TensorFlow Lite**: For the image classification capabilities.
+- **Android Studio**: For the development environment.
+- **Other Libraries**: Any additional libraries or resources used in the project.
+
+## Contact
+
+For questions or feedback, please reach out to:
+
+- **Email**: [mohsinhassan617@gmail.com](mailto:mohsinhassan617@gmail.com)
+
+---
+
+Feel free to update this README as needed to better fit your project.
