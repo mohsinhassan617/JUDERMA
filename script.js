@@ -1,20 +1,15 @@
-document.getElementById('menu-toggle').addEventListener('click', function() {
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('overlay');
 
-    if (sidebar.style.left === '0px') {
-        sidebar.style.left = '-250px';
-        overlay.style.display = 'none';
-    } else {
-        sidebar.style.left = '0';
-        overlay.style.display = 'block';
-    }
-});
+    menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        overlay.classList.toggle('active');
+    });
 
-document.getElementById('overlay').addEventListener('click', function() {
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-    
-    sidebar.style.left = '-250px';
-    overlay.style.display = 'none';
+    overlay.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+    });
 });
