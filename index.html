@@ -3,65 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JUDERMA Project</title>
+    <title>JUDERMA - GitHub Pages</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Welcome to JUDERMA</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Welcome to JUDERMA</h1>
+        <p>Your go-to app for image classification.</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    
+
     <section id="about">
-        <div class="container">
-            <h2>About JUDERMA</h2>
-            <p>JUDERMA is an advanced Android application for image classification using TensorFlow Lite. This project showcases the power of machine learning in mobile applications.</p>
-            <img src="https://via.placeholder.com/600x300" alt="JUDERMA App Screenshot">
-        </div>
+        <h2>About JUDERMA</h2>
+        <p>JUDERMA is a powerful Android app designed for image classification using advanced machine learning models. Developed by Mohsin Hassan, it provides efficient and accurate image processing capabilities for various applications.</p>
+        <button onclick="showMoreInfo()">Learn More</button>
+        <p id="more-info" style="display:none;">JUDERMA uses TensorFlow Lite to perform real-time image classification, making it suitable for mobile devices with limited resources. It features an intuitive interface and supports a wide range of image categories.</p>
     </section>
 
     <section id="features">
-        <div class="container">
-            <h2>Features</h2>
-            <ul>
-                <li>Real-time image classification</li>
-                <li>Optimized for mobile devices</li>
-                <li>Seamless TensorFlow Lite integration</li>
-                <li>High accuracy and performance</li>
-            </ul>
-        </div>
+        <h2>Features</h2>
+        <ul>
+            <li>Real-time image classification</li>
+            <li>Easy-to-use interface</li>
+            <li>Efficient performance on mobile devices</li>
+            <li>Supports multiple image categories</li>
+        </ul>
     </section>
 
     <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form action="https://formspree.io/f/your-form-id" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                
-                <button type="submit">Send</button>
-            </form>
-        </div>
+        <h2>Contact Me</h2>
+        <p>If you have any questions or feedback, feel free to reach out:</p>
+        <ul>
+            <li>Email: <a href="mailto:mohsinhassan617@gmail.com">mohsinhassan617@gmail.com</a></li>
+            <li>GitHub: <a href="https://github.com/mohsinhassan617" target="_blank">mohsinhassan617</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/mohsin-hassan/" target="_blank">Mohsin Hassan</a></li>
+        </ul>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 JUDERMA. All rights reserved.</p>
-        </div>
+        <p>&copy; 2024 Mohsin Hassan. All rights reserved.</p>
     </footer>
+
+    <script>
+        function showMoreInfo() {
+            var info = document.getElementById("more-info");
+            if (info.style.display === "none") {
+                info.style.display = "block";
+            } else {
+                info.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
