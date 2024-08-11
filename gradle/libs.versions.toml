@@ -1,0 +1,68 @@
+[versions]
+agp = "8.5.0"
+androidxAppcompat = "1.7.0"
+appcompatVersion = "1.4.0"
+constraintlayout = "2.1.4"
+firebaseBom = "33.1.2"
+firebaseCoreVersion = "21.1.1"
+glide = "4.16.0"
+googleServices = "4.4.2"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+material = "1.12.0"
+playServicesAuth = "21.2.0"
+playServicesBase = "18.5.0"
+playServicesProviderinstaller = "17.0.0"
+playServicesTasks = "18.2.0"
+firebaseStorage = "21.0.0"
+firebaseDatabase = "21.0.0"
+firebaseMlCommon = "22.1.2"
+firebaseMlModelInterpreter = "22.0.4"
+preference = "1.2.1"
+pytorch_android = "2.0.0"
+pytorch_android_torchvision = "2.1.0"
+pytorch_androidVersion = "2.1.0"
+firebaseInappmessaging = "21.0.0"
+cronetEmbedded = "119.6045.31"
+tensorflowLite = "2.16.1"
+tensorflowLiteSupport = "0.4.4"
+
+[libraries]
+androidx-appcompat-v131 = { module = "androidx.appcompat:appcompat", version.ref = "androidxAppcompat" }
+androidx-appcompat-v140 = { module = "androidx.appcompat:appcompat", version = "1.7.0" }
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+compiler = { module = "com.github.bumptech.glide:compiler", version = "4.16.0" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+glide-compiler = { module = "com.github.bumptech.glide:compiler" }
+google-firebase-core = { module = "com.google.firebase:firebase-core", version.ref = "firebaseCoreVersion" }
+google-services = { module = "com.google.gms:google-services", version.ref = "googleServices" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
+play-services-base = { module = "com.google.android.gms:play-services-base", version.ref = "playServicesBase" }
+play-services-providerinstaller = { module = "com.google.android.gms:play-services-providerinstaller", version.ref = "playServicesProviderinstaller" }
+play-services-tasks = { group = "com.google.android.gms", name = "play-services-tasks", version.ref = "playServicesTasks" }
+firebase-storage = { group = "com.google.firebase", name = "firebase-storage", version.ref = "firebaseStorage" }
+firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+firebase-ml-common = { group = "com.google.firebase", name = "firebase-ml-common", version.ref = "firebaseMlCommon" }
+firebase-ml-model-interpreter = { group = "com.google.firebase", name = "firebase-ml-model-interpreter", version.ref = "firebaseMlModelInterpreter" }
+androidx-preference = { group = "androidx.preference", name = "preference", version.ref = "preference" }
+pytorch_android = { module = "org.pytorch:pytorch_android", version = "2.1.0" }
+pytorch_android-v1130 = { module = "org.pytorch:pytorch_android", version.ref = "pytorch_androidVersion" }
+pytorch_android_torchvision = { module = "org.pytorch:pytorch_android_torchvision", version = "2.1.0" }
+pytorch_android_torchvision-v1130 = { module = "org.pytorch:pytorch_android_torchvision", version.ref = "pytorch_android_torchvision" }
+firebase-inappmessaging = { group = "com.google.firebase", name = "firebase-inappmessaging", version.ref = "firebaseInappmessaging" }
+cronet-embedded = { group = "org.chromium.net", name = "cronet-embedded", version.ref = "cronetEmbedded" }
+tensorflow-lite = { module = "org.tensorflow:tensorflow-lite", version.ref = "tensorflowLite" }
+tensorflow-lite-support = { module = "org.tensorflow:tensorflow-lite-support", version.ref = "tensorflowLiteSupport" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+

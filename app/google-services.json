@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "19376274659",
+    "project_id": "ju-derma",
+    "storage_bucket": "ju-derma.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:19376274659:android:aac82ae0fcdfff73ea99d6",
+        "android_client_info": {
+          "package_name": "com.app.juderma"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6Xh4RZvKPl1pWNMPaRYluGjBrzSnwedY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

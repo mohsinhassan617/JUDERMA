@@ -1,0 +1,12 @@
+<!-- ic_error_circle.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="#F44336"> <!-- Adjust tint color as needed -->
+
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10,-4.48,10,-10S17.52,2,12,2zM13,16h-2v-2h2V16zM13,12h-2V6h2V12z"/>
+</vector>

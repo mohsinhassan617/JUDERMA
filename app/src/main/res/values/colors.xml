@@ -1,0 +1,13 @@
+<resources>
+    <color name="colorPrimary">#40E0D0</color> <!-- Light Turquoise -->
+    <color name="colorPrimaryVariant">#20B2AA</color> <!-- Darker shade of Turquoise -->
+    <color name="colorOnPrimary">#FFFFFF</color> <!-- White for text/icons on primary color -->
+    <color name="colorSecondary">#AFEEEE</color> <!-- Pale Turquoise -->
+    <color name="colorSecondaryVariant">#5F9EA0</color> <!-- Cadet Blue -->
+    <color name="colorOnSecondary">#FFFFFF</color> <!-- White for text/icons on secondary color -->
+    <color name="background">#E0FFFF</color> <!-- Light Cyan for background -->
+    <color name="textPrimary">#000000</color> <!-- Black for primary text -->
+    <color name="colorPrimaryDark">#20B2AA</color> <!-- Darker shade of Turquoise -->
+    <color name="colorAccent">#40E0D0</color> <!-- Light Turquoise -->
+    <color name="transparent">#0040E0D0</color>
+</resources>

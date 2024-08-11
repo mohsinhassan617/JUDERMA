@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/splash_background"> <!-- Replace @drawable/splash_background with your background resource -->
+
+    <TextView
+        android:id="@+id/loadingText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please wait..."
+        android:textColor="#265DC4"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:background="@color/transparent"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loadingText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="50dp"
+        android:textAlignment="center"
+        android:indeterminateTint="#265DC4"
+        android:background="@color/transparent"/>
+
+</RelativeLayout>
