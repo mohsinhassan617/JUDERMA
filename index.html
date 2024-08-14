@@ -2,74 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JUDERMA - Project Overview</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .icon {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
     <header>
-    <div class="menu-toggle" id="menu-toggle">
-        &#9776;
-    </div>
-    <h1>Welcome to JUDERMA</h1>
-    <p>Your AI-powered image classification app</p>
-</header>
+        <div class="menu-toggle" id="menu-toggle">
+            &#9776;
+        </div>
+        <h1>Welcome to JUDERMA</h1>
+        <p>Your AI-powered image classification app</p>
+    </header>
 
-<nav class="sidebar" id="sidebar">
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#installation">Installation</a></li>
-        <li><a href="#contributing">Contributing</a></li>
-        <li><a href="#team">Our Team</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#about"><i class="fas fa-info-circle icon"></i>About</a></li>
+            <li><a href="#features"><i class="fas fa-star icon"></i>Features</a></li>
+            <li><a href="#installation"><i class="fas fa-installation icon"></i>Installation</a></li>
+            <li><a href="#contributing"><i class="fas fa-code-branch icon"></i>Contributing</a></li>
+            <li><a href="#team"><i class="fas fa-users icon"></i>Our Team</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope icon"></i>Contact</a></li>
+        </ul>
+    </nav>
 
-<div class="overlay" id="overlay"></div>
+    <div class="overlay" id="overlay"></div>
 
     <main>
         <section id="about">
             <h2>About JUDERMA</h2>
-            <p>JUDERMA is an Android application designed for image classification using TensorFlow Lite. It allows users to classify images based on predefined categories with high accuracy.</p>
+            <p>
+                This application helps in diagnosing skin diseases using advanced machine learning models.
+                You can upload an image of the affected skin area and get an instant prediction.
+            </p>
         </section>
 
         <section id="features">
             <h2>Features</h2>
             <ul>
-                <li>Real-time image classification</li>
-                <li>Integration with TensorFlow Lite for efficient processing</li>
-                <li>User-friendly interface for capturing and selecting images</li>
+                <li><i class="fas fa-clock icon"></i>Real-time image classification</li>
+                <li><i class="fas fa-microchip"></i>&nbsp; &nbsp;Integration with TensorFlow Lite for efficient processing</li>
+                <li><i class="fas fa-user-circle icon"></i>User-friendly interface for capturing and selecting images</li>
             </ul>
         </section>
 
         <section id="installation">
-    <h2>Installation</h2>
-    <p>To get started with JUDERMA, follow these steps:</p>
-    <ol>
-        <li>Clone the repository:
-            <pre><code>git clone https://github.com/mohsinhassan617/JUDERMA.git</code></pre>
-        </li>
-        <li>Navigate to the project directory:
-            <pre><code>cd JUDERMA</code></pre>
-        </li>
-        <li>Open the project in Android Studio.</li>
-        <li>Sync the project with Gradle files by clicking on the "Sync Project with Gradle Files" button in the toolbar.</li>
-        <li>Build the project by selecting "Build" from the top menu and choosing "Make Project" or pressing <code>Ctrl+F9</code>.</li>
-        <li>Run the application on an Android device or emulator by clicking the "Run" button (the green triangle) in the toolbar or pressing <code>Shift+F10</code>.</li>
-    </ol>
-    <p>Download the APK file:</p>
-    <a href="https://github.com/mohsinhassan617/JUDERMA/releases/download/v1.0-beta/app-release.apk" class="download-btn" download="JU-DERMA.apk">Download APK</a>
-</section>
-
+            <h2>Installation</h2>
+            <p>To get started with JUDERMA, follow these steps:</p>
+            <ol>
+                <li>
+                    <i class="fab fa-git icon"></i>Clone the repository:
+                    <pre><code>git clone https://github.com/mohsinhassan617/JUDERMA.git</code></pre>
+                </li>
+                <li>
+                    <i class="fas fa-terminal icon"></i>Navigate to the project directory:
+                    <pre><code>cd JUDERMA</code></pre>
+                </li>
+                <li><i class="fab fa-android icon"></i>Open the project in Android Studio.</li>
+                <li><i class="fas fa-sync icon"></i>Sync the project with Gradle files by clicking on the "Sync Project with Gradle Files" button in the toolbar.</li>
+                <li><i class="fas fa-cogs icon"></i>Build the project by selecting "Build" from the top menu and choosing "Make Project" or pressing <code>Ctrl+F9</code>.</li>
+                <li><i class="fas fa-play icon"></i>Run the application on an Android device or emulator by clicking the "Run" button (the green triangle) in the toolbar or pressing <code>Shift+F10</code>.</li>
+            </ol>
+            <p>Download the APK file:</p>
+            <a href="https://github.com/mohsinhassan617/JUDERMA/releases/download/v1.0-beta/app-release.apk" class="download-btn" download="JU-DERMA.apk">
+                <i class="fas fa-download icon"></i>Download APK
+            </a>
+        </section>
 
         <section id="contributing">
             <h2>Contributing</h2>
             <p>We welcome contributions to improve JUDERMA! If you'd like to contribute, please follow these guidelines:</p>
             <ul>
-                <li>Fork the repository and create a new branch for your changes.</li>
-                <li>Submit a pull request with a clear description of the changes.</li>
+                <li>
+                    <i class="fas fa-code-branch icon"></i>Fork the repository and create a new branch for your changes.
+                </li>
+                <li>
+                    <i class="fas fa-exchange-alt icon"></i>Submit a pull request with a clear description of the changes.
+                </li>
             </ul>
         </section>
 
@@ -77,13 +95,38 @@
             <h2>Our Team</h2>
             <div class="team-member">
                 <h3>Supervised by:</h3>
-                <p><strong>Dr. Jatinder Manhas</strong></p>
+                <p><strong>Dr. Jatinder Manhas</strong>
+                    <br><i>Associate Professor</i>
+                    <br><i>University of Jammu</i></p>
             </div>
             <div class="team-member">
                 <h3>Developed by:</h3>
-                <p><strong>Mohsin Hassan</strong><br>
-                <strong>Tanisha Mahajan</strong><br>
-                <strong>Taiba Banoo</strong></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>ID</th>
+                            <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>0102MCA22</td>
+                            <td>Tanisha Mahajan</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>0104MCA22</td>
+                            <td>Taiba Banoo</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>0114MCA22</td>
+                            <td>Mohsin Hassan</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
@@ -91,8 +134,8 @@
             <h2>Contact</h2>
             <p>If you have any questions or suggestions, feel free to reach out:</p>
             <ul>
-                <li>Email: <a href="mailto:mohsinhassan617@gmail.com">mohsinhassan617@gmail.com</a></li>
-                <li>GitHub: <a href="https://github.com/mohsinhassan617">github.com/mohsinhassan617</a></li>
+                <li><i class="fas fa-envelope icon"></i>Email: <a href="mailto:mohsinhassan617@gmail.com">mohsinhassan617@gmail.com</a></li>
+                <li><i class="fab fa-github icon"></i>GitHub: <a href="https://github.com/mohsinhassan617">github.com/mohsinhassan617</a></li>
             </ul>
         </section>
     </main>
