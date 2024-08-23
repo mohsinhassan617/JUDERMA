@@ -1,61 +1,89 @@
 package com.app.juderma;
 
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.view.View;
+import android.widget.ProgressBar;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import android.content.Intent;
+import android.net.Uri;
+import android.widget.TextView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import java.util.Collections;
+import org.chromium.base.Log;
+
 import java.util.ArrayList;
 import java.util.List;
-import android.content.Intent;
-import android.preference.PreferenceManager;
-
+import java.util.Map;
 
 public class HistoryActivity extends AppCompatActivity {
+    private static final String TAG = "HistoryActivity";
     private HistoryAdapter historyAdapter;
-    private List<HistoryItem> historyList;
+    private final List<HistoryItem> historyList = new ArrayList<>();
+    private ProgressBar progressBar;
+    private TextView emptyStateTextView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
 
-        RecyclerView historyRecyclerView = findViewById(R.id.history_recycler_view);
+        RecyclerView recyclerView = findViewById(R.id.history_recycler_view);
+        progressBar = findViewById(R.id.progress_bar);
+        emptyStateTextView = findViewById(R.id.empty_state_text_view);
 
-        // Initialize the list and adapter
-        historyList = new ArrayList<>();
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
         historyAdapter = new HistoryAdapter(this, historyList);
+        recyclerView.setAdapter(historyAdapter);
 
-        historyRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        historyRecyclerView.setAdapter(historyAdapter);
-
-        // Fetch history data and update the list
-        fetchHistoryData();
-
+        loadHistoryItems();
         setupBottomNavigation();
     }
 
-    private void fetchHistoryData() {
+    private void loadHistoryItems() {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String historyData = sharedPreferences.getString("history", "");
-        String[] entries = historyData.split("\n");
-        historyList.clear();
+        historyList.clear(); // Clear existing items
 
-        for (String entry : entries) {
-            // Assuming entries are in the format: TIMESTAMP | PREDICTION | DESCRIPTION | IMAGE_URI
-            String[] parts = entry.split(" \\| ");
-            if (parts.length == 4) {
-                String timestamp = parts[0];
-                String prediction = parts[1];
-                String description = parts[2];
-                Uri imageUri = Uri.parse(parts[3]);
-                historyList.add(new HistoryItem(timestamp, prediction, description, imageUri));
+        Map<String, ?> allEntries = sharedPreferences.getAll();
+        for (String key : allEntries.keySet()) {
+            if (key.endsWith("_timestamp")) {
+                String baseKey = key.replace("_timestamp", "");
+                String timestamp = sharedPreferences.getString(baseKey + "_timestamp", "");
+                String prediction = sharedPreferences.getString(baseKey + "_prediction", "");
+                String description = sharedPreferences.getString(baseKey + "_description", "");
+                String imageUriString = sharedPreferences.getString(baseKey + "_imageUri", "");
+
+                Uri imageUri = imageUriString.isEmpty() ? null : Uri.parse(imageUriString);
+
+                HistoryItem item = new HistoryItem(timestamp, prediction, description, imageUri);
+                historyList.add(item);
+
+                Log.d(TAG, "Loaded item - Timestamp: " + timestamp + ", Prediction: " + prediction);
             }
         }
+
+        // Sort the list by timestamp (newest first)
+        Collections.sort(historyList, (item1, item2) -> item2.getTimestamp().compareTo(item1.getTimestamp()));
+
         historyAdapter.notifyDataSetChanged();
+        updateUIState();
     }
+
+    private void updateUIState() {
+        progressBar.setVisibility(View.GONE);
+        if (historyList.isEmpty()) {
+            emptyStateTextView.setVisibility(View.VISIBLE);
+            emptyStateTextView.setText("No history items found");
+        } else {
+            emptyStateTextView.setVisibility(View.GONE);
+        }
+    }
+
+
     private void setupBottomNavigation() {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {

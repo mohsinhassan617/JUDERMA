@@ -62,6 +62,7 @@
         android:text="Description Here"
         android:textSize="16sp"
         android:textColor="#555555"
+        android:autoLink="web"
     android:layout_gravity="center"/>
 
     <!-- Space between description and bottom navigation -->

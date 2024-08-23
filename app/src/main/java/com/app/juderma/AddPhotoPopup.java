@@ -62,17 +62,20 @@ public class AddPhotoPopup extends AppCompatActivity {
     }
 
     private void captureImage() {
+        Log.d(TAG, "captureImage() called");
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         File photoFile = createImageFile();
         if (photoFile != null) {
-            imageUri = FileProvider.getUriForFile(this,
-                    "com.app.juderma.fileprovider", photoFile);
+            imageUri = FileProvider.getUriForFile(this, "com.app.juderma.fileprovider", photoFile);
+            Log.d(TAG, "FileProvider URI: " + imageUri);
             takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
             cameraLauncher.launch(takePictureIntent);
         } else {
+            Log.e(TAG, "Error creating image file");
             Toast.makeText(this, "Error creating image file", Toast.LENGTH_SHORT).show();
         }
     }
+
 
     private void selectImage() {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);

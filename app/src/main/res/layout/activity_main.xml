@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="SELECT PHOTO"
-                    android:textColor="#B2B2B2"
+                    android:textColor="#A1887F"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </FrameLayout>
@@ -70,7 +70,8 @@
                     android:layout_height="48dp"
                     android:src="@drawable/ic_check_circle"
                     android:visibility="gone"
-                    android:contentDescription="Upload Success" />
+                    android:contentDescription="Upload Success"
+                    tools:ignore="HardcodedText" />
 
                 <ImageView
                     android:id="@+id/upload_failure_icon"
@@ -78,7 +79,8 @@
                     android:layout_height="48dp"
                     android:src="@drawable/ic_error_circle"
                     android:visibility="gone"
-                    android:contentDescription="Upload Failure" />
+                    android:contentDescription="Upload Failure"
+                    tools:ignore="HardcodedText" />
             </FrameLayout>
 
             <Button
@@ -93,6 +95,7 @@
 
 
             <LinearLayout
+                style="?android:attr/buttonBarStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -100,7 +103,7 @@
                 android:layout_marginTop="16dp">
 
                 <Button
-                    android:id ="@+id/select_photo_button"
+                    android:id="@+id/select_photo_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
@@ -127,7 +130,8 @@
                     android:text="ANALYZE"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -193,6 +197,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu"
-        android:background="@color/colorOnPrimary"/>
+        android:background="@color/colorOnPrimary"
+        tools:ignore="VisualLintBottomNav" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
